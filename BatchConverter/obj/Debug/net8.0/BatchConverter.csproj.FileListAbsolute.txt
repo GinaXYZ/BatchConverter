@@ -1,0 +1,14 @@
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\bin\Debug\net8.0\BatchConverter.exe
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\bin\Debug\net8.0\BatchConverter.deps.json
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\bin\Debug\net8.0\BatchConverter.runtimeconfig.json
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\bin\Debug\net8.0\BatchConverter.dll
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\bin\Debug\net8.0\BatchConverter.pdb
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\BatchConverter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\BatchConverter.AssemblyInfoInputs.cache
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\BatchConverter.AssemblyInfo.cs
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\BatchConverter.csproj.CoreCompileInputs.cache
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\BatchConverter.dll
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\refint\BatchConverter.dll
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\BatchConverter.pdb
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\BatchConverter.genruntimeconfig.cache
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\ref\BatchConverter.dll
