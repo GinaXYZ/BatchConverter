@@ -5,6 +5,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|c:\\users\\fia\\source\\repos\\batchconverter\\batchconverter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|solutionrelative:batchconverter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|c:\\users\\fia\\source\\repos\\batchconverter\\batchconverter\\services\\jsonwriterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|solutionrelative:batchconverter\\services\\jsonwriterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|c:\\users\\fia\\source\\repos\\batchconverter\\batchconverter\\services\\csvreaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|solutionrelative:batchconverter\\services\\csvreaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|c:\\users\\fia\\source\\repos\\batchconverter\\batchconverter\\services\\csvparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|solutionrelative:batchconverter\\services\\csvparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|c:\\users\\fia\\source\\repos\\batchconverter\\batchconverter\\models\\exportresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|solutionrelative:batchconverter\\models\\exportresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|c:\\users\\fia\\source\\repos\\batchconverter\\batchconverter\\models\\produkt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|solutionrelative:batchconverter\\models\\produkt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,13 +50,78 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JsonWriterService.cs",
+              "DocumentMoniker": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Services\\JsonWriterService.cs",
+              "RelativeDocumentMoniker": "BatchConverter\\Services\\JsonWriterService.cs",
+              "ToolTip": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Services\\JsonWriterService.cs",
+              "RelativeToolTip": "BatchConverter\\Services\\JsonWriterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:32:05.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CsvParserService.cs",
+              "DocumentMoniker": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Services\\CsvParserService.cs",
+              "RelativeDocumentMoniker": "BatchConverter\\Services\\CsvParserService.cs",
+              "ToolTip": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Services\\CsvParserService.cs",
+              "RelativeToolTip": "BatchConverter\\Services\\CsvParserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:31:57.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CsvReaderService.cs",
+              "DocumentMoniker": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Services\\CsvReaderService.cs",
+              "RelativeDocumentMoniker": "BatchConverter\\Services\\CsvReaderService.cs",
+              "ToolTip": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Services\\CsvReaderService.cs",
+              "RelativeToolTip": "BatchConverter\\Services\\CsvReaderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:31:43.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExportResult.cs",
+              "DocumentMoniker": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Models\\ExportResult.cs",
+              "RelativeDocumentMoniker": "BatchConverter\\Models\\ExportResult.cs",
+              "ToolTip": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Models\\ExportResult.cs",
+              "RelativeToolTip": "BatchConverter\\Models\\ExportResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:31:29.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Produkt.cs",
+              "DocumentMoniker": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Models\\Produkt.cs",
+              "RelativeDocumentMoniker": "BatchConverter\\Models\\Produkt.cs",
+              "ToolTip": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Models\\Produkt.cs",
+              "RelativeToolTip": "BatchConverter\\Models\\Produkt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:31:19.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Program.cs",
               "RelativeDocumentMoniker": "BatchConverter\\Program.cs",
               "ToolTip": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Program.cs",
               "RelativeToolTip": "BatchConverter\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALoAAAAAAAAAAAAqwNYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T12:25:54.093Z",
               "EditorCaption": ""

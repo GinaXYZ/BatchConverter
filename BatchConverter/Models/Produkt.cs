@@ -8,5 +8,6 @@ namespace BatchConverter.Models
 {
     internal class Produkt
     {
+
     }
 }
