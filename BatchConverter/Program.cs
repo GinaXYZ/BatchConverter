@@ -11,68 +11,117 @@ namespace BatchConverter
 {
     internal class Program
     {
+        private const string AppTitle = "CSV zu JSON Konverter";
+        private const string TitleSeparator = "=====================";
+
+        private static readonly JsonSerializerOptions JsonOptions = new()
+        {
+            WriteIndented = true
+        };
+
         static async Task Main(string[] args)
         {
-            Console.WriteLine("CSV zu JSON Konverter");
-            Console.WriteLine(new string('=', 21));
+            Console.Title = AppTitle;
+            Console.WriteLine(AppTitle);
+            Console.WriteLine(TitleSeparator);
             Console.WriteLine();
 
-            var (inputDir, outputDir) = ParseArguments(args);
-            if (string.IsNullOrWhiteSpace(inputDir) || !Directory.Exists(inputDir))
+            // Fester absoluter Pfad
+            var inputDir = @"C:\Users\FIA\source\repos\BatchConverter\BatchConverter\TestDaten";
+            var outputDir = inputDir; // Ausgabe auch nach TestDaten
+
+            if (!Directory.Exists(inputDir))
             {
-                Console.WriteLine("Fehler: Ungültiges oder fehlendes Eingabeverzeichnis. Benutze --in\"<Pfad>\"");
+                Console.WriteLine($"Fehler: Eingabeverzeichnis existiert nicht: {inputDir}");
+                Console.WriteLine("Beliebige Taste zum Beenden...");
+                Console.ReadKey(true);
                 return;
             }
-            outputDir ??= inputDir;
 
-            Console.WriteLine($"Eingabeverzeichnis: {Path.GetFullPath(inputDir)}");
-            Console.WriteLine($"Ausgabeverzeichnis: {Path.GetFullPath(outputDir)}");
-            Console.WriteLine();
-            Console.WriteLine("Drücke [Escape] zum Abbrechen.");
-            Console.WriteLine();
-
-            var cts = new CancellationTokenSource();
-            var token = cts.Token;
-
-            // Tastaturüberwachung (Escape zum Abbrechen)
-            var keyTask = Task.Run(() =>
+            // Haupt-Menüschleife: wiederholt Datei auswählen und konvertieren
+            while (true)
             {
-                while (!token.IsCancellationRequested)
+                Console.Clear();
+                PrintHeader();
+                Console.WriteLine($"Verzeichnis: {Path.GetFullPath(inputDir)}");
+                Console.WriteLine();
+                Console.WriteLine("Verfügbare CSV-Dateien:");
+                Console.WriteLine();
+
+                // CSV-Dateien jedes Mal neu laden
+                var csvFiles = Directory.GetFiles(inputDir, "*.csv", SearchOption.TopDirectoryOnly)
+                                        .OrderBy(f => f, StringComparer.OrdinalIgnoreCase)
+                                        .ToArray();
+                
+                if (csvFiles.Length == 0)
                 {
-                    if (Console.KeyAvailable)
-                    {
-                        var key = Console.ReadKey(intercept: true);
-                        if (key.Key == ConsoleKey.Escape)
-                        {
-                            cts.Cancel();
-                            break;
-                        }
-                    }
-                    Thread.Sleep(100);
+                    Console.WriteLine($"Keine CSV-Dateien im Ordner: {inputDir}");
+                    Console.WriteLine("Beliebige Taste zum Beenden...");
+                    Console.ReadKey(true);
+                    return;
                 }
-            });
 
-            var progress = new Progress<string>(msg =>
-            {
-                Console.WriteLine(msg);
-            });
+                for (int i = 0; i < csvFiles.Length; i++)
+                {   
+                    var name = Path.GetFileName(csvFiles[i]);
+                    Console.WriteLine($"  {i + 1,2}: {name}");
+                }
 
-            var csvFiles = Directory.GetFiles(inputDir, "*.csv", SearchOption.TopDirectoryOnly);
-            Console.WriteLine($"Gefunden: {csvFiles.Length} CSV-Datei(en)");
-            Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Wähle eine Datei per Nummer und drücke [Enter].");
+                Console.WriteLine("Drücke [Escape], um die Anwendung zu beenden.");
+                Console.WriteLine();
 
-            int processed = 0;
-            int failed = 0;
-            int cancelled = 0;
-            var sw = System.Diagnostics.Stopwatch.StartNew();
+                var choice = ReadChoice(csvFiles.Length);
+                if (choice == null)
+                {
+                    // ESC im Auswahlmenü -> Programm beenden
+                    return;
+                }
 
-            for (int i = 0; i < csvFiles.Length; i++)
-            {
-                if (token.IsCancellationRequested) break;
-
-                var csvPath = csvFiles[i];
+                var index = choice.Value - 1;
+                var csvPath = csvFiles[index];
                 var fileName = Path.GetFileName(csvPath);
-                Console.WriteLine($"[{i + 1}/{csvFiles.Length}] {fileName}");
+
+                Console.Clear();
+                PrintHeader($"Ausgewählte Datei: {fileName}");
+                Console.WriteLine($"Verzeichnis:       {Path.GetFullPath(inputDir)}");
+                Console.WriteLine();
+                Console.WriteLine("Drücke [Escape] zum Abbrechen der Konvertierung.");
+                Console.WriteLine();
+
+                var cts = new CancellationTokenSource();
+                var token = cts.Token;
+
+                // Escape-Überwachung in separatem Task
+                var keyTask = Task.Run(() =>
+                {
+                    while (!token.IsCancellationRequested)
+                    {
+                        if (Console.KeyAvailable)
+                        {
+                            var key = Console.ReadKey(intercept: true);
+                            if (key.Key == ConsoleKey.Escape)
+                            {
+                                cts.Cancel();
+                                break;
+                            }
+                        }
+                        Thread.Sleep(100);
+                    }
+                });
+
+                var progress = new Progress<string>(msg =>
+                {
+                    Console.WriteLine(msg);
+                });
+
+                var sw = System.Diagnostics.Stopwatch.StartNew();
+                int processed = 0;
+                int failed = 0;
+                int cancelled = 0;
+
+                Console.WriteLine($"[1/1] {fileName}");
 
                 try
                 {
@@ -84,7 +133,6 @@ namespace BatchConverter
                 {
                     Console.WriteLine("      -> Abgebrochen");
                     cancelled++;
-                    break;
                 }
                 catch (Exception ex)
                 {
@@ -92,54 +140,25 @@ namespace BatchConverter
                     failed++;
                 }
 
+                sw.Stop();
+                cts.Cancel();
+                await keyTask;
+
                 Console.WriteLine();
+                Console.WriteLine("Zusammenfassung:");
+                Console.WriteLine($"  Verarbeitet: {processed} Datei(en)");
+                Console.WriteLine($"  Fehler:      {failed} Datei(en)");
+                Console.WriteLine($"  Abgebrochen: {cancelled} Datei(en)");
+                Console.WriteLine($"  Dauer:       {sw.Elapsed.TotalSeconds:N2} Sekunden");
+                Console.WriteLine();
+
+                Console.WriteLine("Nochmal konvertieren? [J]a / [N]ein (oder [Escape] zum Beenden)");
+                var k = Console.ReadKey(intercept: true);
+                if (k.Key == ConsoleKey.Escape || k.Key == ConsoleKey.N)
+                    return;
+                // bei J oder anderen Tasten: erneut Menü anzeigen
             }
-
-            sw.Stop();
-            Console.WriteLine("Zusammenfassung:");
-            Console.WriteLine($"  Verarbeitet: {processed} Datei(en)");
-            Console.WriteLine($"  Fehler:      {failed} Datei(en)");
-            Console.WriteLine($"  Abgebrochen: {cancelled} Datei(en)");
-            Console.WriteLine($"  Dauer:       {sw.Elapsed.TotalSeconds:N2} Sekunden");
-
-            // Ensure keyboard task stops
-            cts.Cancel();
-            await keyTask;
         }
-
-        private static (string input, string output) ParseArguments(string[] args)
-        {
-            string input = null;
-            string output = null;
-
-            for (int i = 0; i < args.Length; i++)
-            {
-                var a = args[i].Trim();
-                if (a.StartsWith("--in", StringComparison.OrdinalIgnoreCase))
-                {
-                    var val = a.Length > 4 ? a.Substring(4) : null;
-                    if (string.IsNullOrWhiteSpace(val) && i + 1 < args.Length)
-                    {
-                        val = args[++i];
-                    }
-                    input = TrimQuotes(val);
-                }
-                else if (a.StartsWith("--out", StringComparison.OrdinalIgnoreCase))
-                {
-                    var val = a.Length > 5 ? a.Substring(5) : null;
-                    if (string.IsNullOrWhiteSpace(val) && i + 1 < args.Length)
-                    {
-                        val = args[++i];
-                    }
-                    output = TrimQuotes(val);
-                }
-            }
-
-            return (input, output);
-
-            static string TrimQuotes(string s) => s?.Trim().Trim('\'', '\"').Trim();
-        }
-
         private static async Task VerarbeiteDateiAsync(string csvPath, string outputDir, IProgress<string> progress, CancellationToken token)
         {
             progress.Report("      Lese CSV-Datei...");
@@ -170,6 +189,18 @@ namespace BatchConverter
                 string headerLine = contentLines[0];
                 var headers = headerLine.Split(';').Select(h => h.Trim()).ToArray();
 
+                // Header-Indizes vorher ermitteln (effizienter)
+                int idIndex = Array.FindIndex(headers, h => string.Equals(h, "Id", StringComparison.OrdinalIgnoreCase));
+                int nameIndex = Array.FindIndex(headers, h => string.Equals(h, "Name", StringComparison.OrdinalIgnoreCase));
+                int preisIndex = Array.FindIndex(headers, h => string.Equals(h, "Preis", StringComparison.OrdinalIgnoreCase));
+                int kategorieIndex = Array.FindIndex(headers, h => string.Equals(h, "Kategorie", StringComparison.OrdinalIgnoreCase));
+                int bestandIndex = Array.FindIndex(headers, h => string.Equals(h, "Bestand", StringComparison.OrdinalIgnoreCase));
+
+                if (idIndex < 0 || nameIndex < 0 || preisIndex < 0 || kategorieIndex < 0 || bestandIndex < 0)
+                {
+                    throw new InvalidDataException("CSV enthält nicht alle erforderlichen Spalten (Id, Name, Preis, Kategorie, Bestand)");
+                }
+
                 for (int i = 1; i < contentLines.Length; i++)
                 {
                     token.ThrowIfCancellationRequested();
@@ -177,29 +208,17 @@ namespace BatchConverter
                     var parts = line.Split(';');
 
                     if (parts.Length != headers.Length)
-                    {
-                        // ungültige Zeile überspringen
                         continue;
-                    }
 
                     try
                     {
-                        var dict = headers.Zip(parts, (h, v) => new { h, v })
-                                          .ToDictionary(x => x.h, x => x.v.Trim());
-
-                        int id = int.Parse(Get(dict, "Id"), CultureInfo.InvariantCulture);
-                        string name = Get(dict, "Name");
-                        decimal preis = decimal.Parse(Get(dict, "Preis"), CultureInfo.InvariantCulture);
-                        string kategorie = Get(dict, "Kategorie");
-                        int bestand = int.Parse(Get(dict, "Bestand"), CultureInfo.InvariantCulture);
-
                         results.Add(new ProduktSimple
                         {
-                            Id = id,
-                            Name = name,
-                            Preis = preis,
-                            Kategorie = kategorie,
-                            Bestand = bestand
+                            Id = int.Parse(parts[idIndex].Trim(), CultureInfo.InvariantCulture),
+                            Name = parts[nameIndex].Trim(),
+                            Preis = decimal.Parse(parts[preisIndex].Trim(), CultureInfo.InvariantCulture),
+                            Kategorie = parts[kategorieIndex].Trim(),
+                            Bestand = int.Parse(parts[bestandIndex].Trim(), CultureInfo.InvariantCulture)
                         });
                     }
                     catch
@@ -210,13 +229,6 @@ namespace BatchConverter
                 }
 
                 return results;
-
-                static string Get(Dictionary<string, string> d, string key)
-                {
-                    // tolerant: suche case-insensitive
-                    var k = d.Keys.FirstOrDefault(x => string.Equals(x, key, StringComparison.OrdinalIgnoreCase));
-                    return k != null ? d[k] : string.Empty;
-                }
             }, token);
 
             progress.Report($"      {produkte.Count} Produkte geparst");
@@ -237,13 +249,7 @@ namespace BatchConverter
                 }).ToList()
             };
 
-            var options = new JsonSerializerOptions
-            {
-                WriteIndented = true
-            };
-
-            var json = JsonSerializer.Serialize(export, options);
-            Directory.CreateDirectory(outputDir);
+            var json = JsonSerializer.Serialize(export, JsonOptions);
             var outFile = Path.Combine(outputDir, Path.GetFileNameWithoutExtension(csvPath) + ".json");
             await File.WriteAllTextAsync(outFile, json, token);
         }
@@ -257,8 +263,7 @@ namespace BatchConverter
                 anzahlDatensaetze = 0,
                 produkte = new object[0]
             };
-            var json = JsonSerializer.Serialize(export, new JsonSerializerOptions { WriteIndented = true });
-            Directory.CreateDirectory(outputDir);
+            var json = JsonSerializer.Serialize(export, JsonOptions);
             var outFile = Path.Combine(outputDir, Path.GetFileNameWithoutExtension(csvPath) + ".json");
             await File.WriteAllTextAsync(outFile, json, token);
             progress.Report($"      -> {Path.GetFileName(outFile)} (leer) geschrieben");
@@ -272,6 +277,61 @@ namespace BatchConverter
             public decimal Preis { get; set; }
             public string Kategorie { get; set; } = string.Empty;
             public int Bestand { get; set; }
+        }
+
+        private static int? ReadChoice(int max)
+        {
+            while (true)
+            {
+                Console.Write($"Auswahl (1-{max} oder [Escape]): ");
+                
+                var input = new System.Text.StringBuilder();
+                
+                while (true)
+                {
+                    var key = Console.ReadKey(intercept: true);
+                    
+                    if (key.Key == ConsoleKey.Escape)
+                    {
+                        Console.WriteLine();
+                        return null;
+                    }
+                    
+                    if (key.Key == ConsoleKey.Enter)
+                    {
+                        Console.WriteLine();
+                        if (input.Length > 0 && int.TryParse(input.ToString(), out int num) && num >= 1 && num <= max)
+                        {
+                            return num;
+                        }
+                        Console.WriteLine("  -> Ungültige Eingabe.");
+                        break;
+                    }
+                    
+                    if (key.Key == ConsoleKey.Backspace && input.Length > 0)
+                    {
+                        input.Length--;
+                        Console.Write("\b \b");
+                    }
+                    else if (char.IsDigit(key.KeyChar))
+                    {
+                        input.Append(key.KeyChar);
+                        Console.Write(key.KeyChar);
+                    }
+                }
+            }
+        }
+
+        private static void PrintHeader(string subtitle = null)
+        {
+            Console.WriteLine(AppTitle);
+            Console.WriteLine(TitleSeparator);
+            Console.WriteLine();
+            if (!string.IsNullOrEmpty(subtitle))
+            {
+                Console.WriteLine(subtitle);
+                Console.WriteLine();
+            }
         }
     }
 }

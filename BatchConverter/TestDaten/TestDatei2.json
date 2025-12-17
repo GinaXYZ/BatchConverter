@@ -1,0 +1,357 @@
+{
+  "quelldatei": "TestDatei2.csv",
+  "konvertiertAm": "2025-12-17T07:37:00.6704501Z",
+  "anzahlDatensaetze": 50,
+  "produkte": [
+    {
+      "id": 1,
+      "name": "Laptop Pro 15",
+      "preis": 1299.99,
+      "kategorie": "Elektronik",
+      "bestand": 25
+    },
+    {
+      "id": 2,
+      "name": "Kabellose Maus",
+      "preis": 29.99,
+      "kategorie": "Elektronik",
+      "bestand": 150
+    },
+    {
+      "id": 3,
+      "name": "Mechanische Tastatur",
+      "preis": 89.90,
+      "kategorie": "Elektronik",
+      "bestand": 60
+    },
+    {
+      "id": 4,
+      "name": "B\u00FCrostuhl Komfort",
+      "preis": 199.00,
+      "kategorie": "M\u00F6bel",
+      "bestand": 40
+    },
+    {
+      "id": 5,
+      "name": "Schreibtisch Eiche",
+      "preis": 349.50,
+      "kategorie": "M\u00F6bel",
+      "bestand": 20
+    },
+    {
+      "id": 6,
+      "name": "Kaffeetasse",
+      "preis": 4.99,
+      "kategorie": "Haushalt",
+      "bestand": 500
+    },
+    {
+      "id": 7,
+      "name": "LED Schreibtischlampe",
+      "preis": 24.95,
+      "kategorie": "Beleuchtung",
+      "bestand": 85
+    },
+    {
+      "id": 8,
+      "name": "Notizbuch A5",
+      "preis": 3.49,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 300
+    },
+    {
+      "id": 9,
+      "name": "USB-C Ladekabel",
+      "preis": 9.99,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 200
+    },
+    {
+      "id": 10,
+      "name": "Wasserflasche Edelstahl",
+      "preis": 19.95,
+      "kategorie": "Haushalt",
+      "bestand": 120
+    },
+    {
+      "id": 11,
+      "name": "Monitor 27 Zoll",
+      "preis": 279.00,
+      "kategorie": "Elektronik",
+      "bestand": 35
+    },
+    {
+      "id": 12,
+      "name": "HDMI Kabel 2m",
+      "preis": 12.49,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 180
+    },
+    {
+      "id": 13,
+      "name": "Bluetooth Kopfh\u00F6rer",
+      "preis": 59.99,
+      "kategorie": "Elektronik",
+      "bestand": 90
+    },
+    {
+      "id": 14,
+      "name": "Smartphone St\u00E4nder",
+      "preis": 14.95,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 140
+    },
+    {
+      "id": 15,
+      "name": "Aktenordner A4",
+      "preis": 2.99,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 400
+    },
+    {
+      "id": 16,
+      "name": "Drucker Tintenstrahl",
+      "preis": 149.00,
+      "kategorie": "Elektronik",
+      "bestand": 30
+    },
+    {
+      "id": 17,
+      "name": "Toner Schwarz",
+      "preis": 49.90,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 75
+    },
+    {
+      "id": 18,
+      "name": "Schreibtischunterlage",
+      "preis": 11.95,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 160
+    },
+    {
+      "id": 19,
+      "name": "Rollcontainer B\u00FCro",
+      "preis": 129.00,
+      "kategorie": "M\u00F6bel",
+      "bestand": 25
+    },
+    {
+      "id": 20,
+      "name": "Whiteboard 90x60",
+      "preis": 39.99,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 50
+    },
+    {
+      "id": 21,
+      "name": "LED Stehlampe",
+      "preis": 79.00,
+      "kategorie": "Beleuchtung",
+      "bestand": 45
+    },
+    {
+      "id": 22,
+      "name": "K\u00FCchenmesser Set",
+      "preis": 59.95,
+      "kategorie": "Haushalt",
+      "bestand": 70
+    },
+    {
+      "id": 23,
+      "name": "Toaster Edelstahl",
+      "preis": 34.99,
+      "kategorie": "Haushalt",
+      "bestand": 65
+    },
+    {
+      "id": 24,
+      "name": "Externe Festplatte 1TB",
+      "preis": 89.99,
+      "kategorie": "Elektronik",
+      "bestand": 55
+    },
+    {
+      "id": 25,
+      "name": "USB-Hub 4-Port",
+      "preis": 17.95,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 110
+    },
+    {
+      "id": 26,
+      "name": "Webcam Full HD",
+      "preis": 69.00,
+      "kategorie": "Elektronik",
+      "bestand": 40
+    },
+    {
+      "id": 27,
+      "name": "Mauspad XXL",
+      "preis": 9.49,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 220
+    },
+    {
+      "id": 28,
+      "name": "Papier A4 500 Blatt",
+      "preis": 6.99,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 350
+    },
+    {
+      "id": 29,
+      "name": "Heftger\u00E4t Metall",
+      "preis": 12.99,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 95
+    },
+    {
+      "id": 30,
+      "name": "Locher Standard",
+      "preis": 8.49,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 130
+    },
+    {
+      "id": 31,
+      "name": "Regal W\u00FCrfel",
+      "preis": 59.00,
+      "kategorie": "M\u00F6bel",
+      "bestand": 30
+    },
+    {
+      "id": 32,
+      "name": "Steckdosenleiste 6-fach",
+      "preis": 14.99,
+      "kategorie": "Elektronik",
+      "bestand": 160
+    },
+    {
+      "id": 33,
+      "name": "Tischventilator",
+      "preis": 24.90,
+      "kategorie": "Haushalt",
+      "bestand": 80
+    },
+    {
+      "id": 34,
+      "name": "Laptop Rucksack",
+      "preis": 49.95,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 70
+    },
+    {
+      "id": 35,
+      "name": "Smartphone Ladeger\u00E4t",
+      "preis": 19.99,
+      "kategorie": "Elektronik",
+      "bestand": 150
+    },
+    {
+      "id": 36,
+      "name": "Kabelbinder Set",
+      "preis": 5.99,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 300
+    },
+    {
+      "id": 37,
+      "name": "Monitorst\u00E4nder",
+      "preis": 34.50,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 60
+    },
+    {
+      "id": 38,
+      "name": "LED Gl\u00FChbirne E27",
+      "preis": 4.49,
+      "kategorie": "Beleuchtung",
+      "bestand": 500
+    },
+    {
+      "id": 39,
+      "name": "Schreibtisch Organizer",
+      "preis": 16.95,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 120
+    },
+    {
+      "id": 40,
+      "name": "Kaffeemaschine Filter",
+      "preis": 79.99,
+      "kategorie": "Haushalt",
+      "bestand": 45
+    },
+    {
+      "id": 41,
+      "name": "Mikrowelle 20L",
+      "preis": 119.00,
+      "kategorie": "Haushalt",
+      "bestand": 35
+    },
+    {
+      "id": 42,
+      "name": "Bluetooth Lautsprecher",
+      "preis": 39.95,
+      "kategorie": "Elektronik",
+      "bestand": 85
+    },
+    {
+      "id": 43,
+      "name": "Fensterlampe LED",
+      "preis": 29.99,
+      "kategorie": "Beleuchtung",
+      "bestand": 55
+    },
+    {
+      "id": 44,
+      "name": "Briefablage Kunststoff",
+      "preis": 7.99,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 200
+    },
+    {
+      "id": 45,
+      "name": "Netzwerkkabel 5m",
+      "preis": 8.95,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 180
+    },
+    {
+      "id": 46,
+      "name": "Gaming Maus",
+      "preis": 49.99,
+      "kategorie": "Elektronik",
+      "bestand": 65
+    },
+    {
+      "id": 47,
+      "name": "Sitzkissen Ergonomisch",
+      "preis": 24.95,
+      "kategorie": "M\u00F6bel",
+      "bestand": 90
+    },
+    {
+      "id": 48,
+      "name": "Thermobecher",
+      "preis": 14.49,
+      "kategorie": "Haushalt",
+      "bestand": 110
+    },
+    {
+      "id": 49,
+      "name": "Taschenrechner B\u00FCro",
+      "preis": 19.90,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 75
+    },
+    {
+      "id": 50,
+      "name": "Dockingstation USB-C",
+      "preis": 129.99,
+      "kategorie": "Elektronik",
+      "bestand": 28
+    }
+  ]
+}

@@ -12,3 +12,4 @@ C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\refint\
 C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\BatchConverter.pdb
 C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\BatchConverter.genruntimeconfig.cache
 C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\ref\BatchConverter.dll
+C:\Users\FIA\source\repos\BatchConverter\BatchConverter\obj\Debug\net8.0\BatchConverter.sourcelink.json

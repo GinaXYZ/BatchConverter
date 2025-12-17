@@ -1,0 +1,357 @@
+{
+  "quelldatei": "TestDatei3.csv",
+  "konvertiertAm": "2025-12-17T07:36:53.2207493Z",
+  "anzahlDatensaetze": 50,
+  "produkte": [
+    {
+      "id": 1,
+      "name": "Produkt A1",
+      "preis": 742.83,
+      "kategorie": "Elektronik",
+      "bestand": 18
+    },
+    {
+      "id": 2,
+      "name": "Produkt B2",
+      "preis": 15.47,
+      "kategorie": "Haushalt",
+      "bestand": 392
+    },
+    {
+      "id": 3,
+      "name": "Produkt C3",
+      "preis": 128.99,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 74
+    },
+    {
+      "id": 4,
+      "name": "Produkt D4",
+      "preis": 59.10,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 210
+    },
+    {
+      "id": 5,
+      "name": "Produkt E5",
+      "preis": 899.00,
+      "kategorie": "Elektronik",
+      "bestand": 12
+    },
+    {
+      "id": 6,
+      "name": "Produkt F6",
+      "preis": 6.75,
+      "kategorie": "Haushalt",
+      "bestand": 640
+    },
+    {
+      "id": 7,
+      "name": "Produkt G7",
+      "preis": 249.49,
+      "kategorie": "M\u00F6bel",
+      "bestand": 33
+    },
+    {
+      "id": 8,
+      "name": "Produkt H8",
+      "preis": 19.99,
+      "kategorie": "Beleuchtung",
+      "bestand": 155
+    },
+    {
+      "id": 9,
+      "name": "Produkt I9",
+      "preis": 3.25,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 980
+    },
+    {
+      "id": 10,
+      "name": "Produkt J10",
+      "preis": 44.90,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 87
+    },
+    {
+      "id": 11,
+      "name": "Produkt K11",
+      "preis": 1349.95,
+      "kategorie": "Elektronik",
+      "bestand": 6
+    },
+    {
+      "id": 12,
+      "name": "Produkt L12",
+      "preis": 27.80,
+      "kategorie": "Haushalt",
+      "bestand": 260
+    },
+    {
+      "id": 13,
+      "name": "Produkt M13",
+      "preis": 79.99,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 140
+    },
+    {
+      "id": 14,
+      "name": "Produkt N14",
+      "preis": 18.40,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 410
+    },
+    {
+      "id": 15,
+      "name": "Produkt O15",
+      "preis": 459.00,
+      "kategorie": "M\u00F6bel",
+      "bestand": 21
+    },
+    {
+      "id": 16,
+      "name": "Produkt P16",
+      "preis": 9.99,
+      "kategorie": "Beleuchtung",
+      "bestand": 530
+    },
+    {
+      "id": 17,
+      "name": "Produkt Q17",
+      "preis": 299.75,
+      "kategorie": "Elektronik",
+      "bestand": 48
+    },
+    {
+      "id": 18,
+      "name": "Produkt R18",
+      "preis": 5.60,
+      "kategorie": "Haushalt",
+      "bestand": 890
+    },
+    {
+      "id": 19,
+      "name": "Produkt S19",
+      "preis": 22.95,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 190
+    },
+    {
+      "id": 20,
+      "name": "Produkt T20",
+      "preis": 64.30,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 72
+    },
+    {
+      "id": 21,
+      "name": "Produkt U21",
+      "preis": 119.00,
+      "kategorie": "Elektronik",
+      "bestand": 95
+    },
+    {
+      "id": 22,
+      "name": "Produkt V22",
+      "preis": 14.20,
+      "kategorie": "Haushalt",
+      "bestand": 360
+    },
+    {
+      "id": 23,
+      "name": "Produkt W23",
+      "preis": 7.49,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 700
+    },
+    {
+      "id": 24,
+      "name": "Produkt X24",
+      "preis": 189.90,
+      "kategorie": "M\u00F6bel",
+      "bestand": 28
+    },
+    {
+      "id": 25,
+      "name": "Produkt Y25",
+      "preis": 34.99,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 165
+    },
+    {
+      "id": 26,
+      "name": "Produkt Z26",
+      "preis": 549.00,
+      "kategorie": "Elektronik",
+      "bestand": 19
+    },
+    {
+      "id": 27,
+      "name": "Produkt AA27",
+      "preis": 11.75,
+      "kategorie": "Beleuchtung",
+      "bestand": 420
+    },
+    {
+      "id": 28,
+      "name": "Produkt AB28",
+      "preis": 2.99,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 1200
+    },
+    {
+      "id": 29,
+      "name": "Produkt AC29",
+      "preis": 88.60,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 56
+    },
+    {
+      "id": 30,
+      "name": "Produkt AD30",
+      "preis": 999.99,
+      "kategorie": "Elektronik",
+      "bestand": 8
+    },
+    {
+      "id": 31,
+      "name": "Produkt AE31",
+      "preis": 21.40,
+      "kategorie": "Haushalt",
+      "bestand": 310
+    },
+    {
+      "id": 32,
+      "name": "Produkt AF32",
+      "preis": 67.89,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 102
+    },
+    {
+      "id": 33,
+      "name": "Produkt AG33",
+      "preis": 149.00,
+      "kategorie": "M\u00F6bel",
+      "bestand": 44
+    },
+    {
+      "id": 34,
+      "name": "Produkt AH34",
+      "preis": 4.55,
+      "kategorie": "Beleuchtung",
+      "bestand": 860
+    },
+    {
+      "id": 35,
+      "name": "Produkt AI35",
+      "preis": 399.95,
+      "kategorie": "Elektronik",
+      "bestand": 26
+    },
+    {
+      "id": 36,
+      "name": "Produkt AJ36",
+      "preis": 16.99,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 240
+    },
+    {
+      "id": 37,
+      "name": "Produkt AK37",
+      "preis": 12.30,
+      "kategorie": "Haushalt",
+      "bestand": 510
+    },
+    {
+      "id": 38,
+      "name": "Produkt AL38",
+      "preis": 54.75,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 98
+    },
+    {
+      "id": 39,
+      "name": "Produkt AM39",
+      "preis": 229.00,
+      "kategorie": "M\u00F6bel",
+      "bestand": 17
+    },
+    {
+      "id": 40,
+      "name": "Produkt AN40",
+      "preis": 8.90,
+      "kategorie": "Beleuchtung",
+      "bestand": 670
+    },
+    {
+      "id": 41,
+      "name": "Produkt AO41",
+      "preis": 59.99,
+      "kategorie": "Elektronik",
+      "bestand": 130
+    },
+    {
+      "id": 42,
+      "name": "Produkt AP42",
+      "preis": 25.60,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 185
+    },
+    {
+      "id": 43,
+      "name": "Produkt AQ43",
+      "preis": 6.40,
+      "kategorie": "Haushalt",
+      "bestand": 940
+    },
+    {
+      "id": 44,
+      "name": "Produkt AR44",
+      "preis": 91.25,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 64
+    },
+    {
+      "id": 45,
+      "name": "Produkt AS45",
+      "preis": 749.00,
+      "kategorie": "Elektronik",
+      "bestand": 14
+    },
+    {
+      "id": 46,
+      "name": "Produkt AT46",
+      "preis": 13.99,
+      "kategorie": "Zubeh\u00F6r",
+      "bestand": 275
+    },
+    {
+      "id": 47,
+      "name": "Produkt AU47",
+      "preis": 179.50,
+      "kategorie": "M\u00F6bel",
+      "bestand": 36
+    },
+    {
+      "id": 48,
+      "name": "Produkt AV48",
+      "preis": 3.80,
+      "kategorie": "Beleuchtung",
+      "bestand": 1100
+    },
+    {
+      "id": 49,
+      "name": "Produkt AW49",
+      "preis": 42.95,
+      "kategorie": "B\u00FCrobedarf",
+      "bestand": 158
+    },
+    {
+      "id": 50,
+      "name": "Produkt AX50",
+      "preis": 529.90,
+      "kategorie": "Elektronik",
+      "bestand": 22
+    }
+  ]
+}
