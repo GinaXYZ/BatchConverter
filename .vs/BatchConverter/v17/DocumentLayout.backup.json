@@ -5,18 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|c:\\users\\fia\\source\\repos\\batchconverter\\batchconverter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|solutionrelative:batchconverter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|c:\\users\\fia\\source\\repos\\batchconverter\\batchconverter\\testdaten\\testdatei3.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|solutionrelative:batchconverter\\testdaten\\testdatei3.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|c:\\users\\fia\\source\\repos\\batchconverter\\batchconverter\\testdaten\\testdatei2.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|solutionrelative:batchconverter\\testdaten\\testdatei2.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|c:\\users\\fia\\source\\repos\\batchconverter\\batchconverter\\testdaten\\testdatei.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6E1C2CE0-F810-47F3-AADF-B689E14CC967}|BatchConverter\\BatchConverter.csproj|solutionrelative:batchconverter\\testdaten\\testdatei.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,47 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TestDatei3.json",
-              "DocumentMoniker": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\TestDaten\\TestDatei3.json",
-              "RelativeDocumentMoniker": "BatchConverter\\TestDaten\\TestDatei3.json",
-              "ToolTip": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\TestDaten\\TestDatei3.json",
-              "RelativeToolTip": "BatchConverter\\TestDaten\\TestDatei3.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-17T07:37:08.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestDatei2.json",
-              "DocumentMoniker": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\TestDaten\\TestDatei2.json",
-              "RelativeDocumentMoniker": "BatchConverter\\TestDaten\\TestDatei2.json",
-              "ToolTip": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\TestDaten\\TestDatei2.json",
-              "RelativeToolTip": "BatchConverter\\TestDaten\\TestDatei2.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-17T07:37:07.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TestDatei.json",
-              "DocumentMoniker": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\TestDaten\\TestDatei.json",
-              "RelativeDocumentMoniker": "BatchConverter\\TestDaten\\TestDatei.json",
-              "ToolTip": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\TestDaten\\TestDatei.json",
-              "RelativeToolTip": "BatchConverter\\TestDaten\\TestDatei.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-17T07:37:06.572Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -87,7 +36,7 @@
               "RelativeDocumentMoniker": "BatchConverter\\Program.cs",
               "ToolTip": "C:\\Users\\FIA\\source\\repos\\BatchConverter\\BatchConverter\\Program.cs",
               "RelativeToolTip": "BatchConverter\\Program.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAgwHYAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAgwHgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T12:25:54.093Z",
               "EditorCaption": ""

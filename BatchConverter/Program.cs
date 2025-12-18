@@ -322,7 +322,7 @@ namespace BatchConverter
             }
         }
 
-        private static void PrintHeader(string subtitle = null)
+        private static void PrintHeader(string? subtitle = null)
         {
             Console.WriteLine(AppTitle);
             Console.WriteLine(TitleSeparator);
